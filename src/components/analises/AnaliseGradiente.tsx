@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AbasEstacoesClimaticas } from "./AbasEstacoesClimaticas";
+import { GraficoTemperaturaEstacao } from "./GraficoTemperaturaEstacao";
 
 export function AnaliseGradiente() {
   return (
@@ -7,25 +8,19 @@ export function AnaliseGradiente() {
       <CardHeader>
         <CardTitle>Análise de Gradiente Térmico Vertical</CardTitle>
         <CardDescription>
-          Comparação da variação de temperatura em função da altitude.
+          Variação temporalizada da temperatura instantânea em diferentes níveis altimétricos.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <AbasEstacoesClimaticas
           conteudoBertioga={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Visualização do Gradiente em Bertioga
-            </div>
+            <GraficoTemperaturaEstacao arquivoCsv="bertioga-a765.csv" corLinha="#2563eb" />
           }
           conteudoTaubate={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Visualização do Gradiente em Taubaté
-            </div>
+            <GraficoTemperaturaEstacao arquivoCsv="taubate-a728.csv" corLinha="#16a34a" />
           }
           conteudoCamposJordao={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Visualização do Gradiente em Campos do Jordão
-            </div>
+            <GraficoTemperaturaEstacao arquivoCsv="campos-jordao-a706.csv" corLinha="#ea580c" />
           }
         />
       </CardContent>
