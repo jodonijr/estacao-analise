@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <SidebarProvider>
-      <div className="flex h-screen w-screen overflow-hidden bg-slate-50 text-slate-900">
+      <div className="flex h-screen w-screen overflow-hidden bg-background text-foreground">
         
         <MenuLateral 
           analiseSelecionada={analiseAtiva} 
