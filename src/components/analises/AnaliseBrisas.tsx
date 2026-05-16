@@ -1,31 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AbasEstacoesClimaticas } from "./AbasEstacoesClimaticas";
+import { GraficoBrisasEstacao } from "./GraficoBrisasEstacao";
 
 export function AnaliseBrisas() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Dinâmica de Brisas Vale-Montanha e Marinha</CardTitle>
+        <CardTitle>Dinâmica de Brisas Horárias</CardTitle>
         <CardDescription>
-          Análise da direção e velocidade do vento ao longo dos ciclos diurnos.
+          Velocidade média do vento distribuída pelas 24 horas do dia, indicando ativações de brisas locais.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <AbasEstacoesClimaticas
           conteudoBertioga={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Rosa dos Ventos / Dados de Vento de Bertioga
-            </div>
+            <GraficoBrisasEstacao arquivoCsv="bertioga-a765.csv" corArea="#2563eb" />
           }
           conteudoTaubate={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Rosa dos Ventos / Dados de Vento de Taubaté
-            </div>
+            <GraficoBrisasEstacao arquivoCsv="taubate-a728.csv" corArea="#16a34a" />
           }
           conteudoCamposJordao={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Rosa dos Ventos / Dados de Vento de Campos do Jordão
-            </div>
+            <GraficoBrisasEstacao arquivoCsv="campos-jordao-a706.csv" corArea="#ea580c" />
           }
         />
       </CardContent>
