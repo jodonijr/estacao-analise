@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AbasEstacoesClimaticas } from "./AbasEstacoesClimaticas";
+import { GraficoAmplitudeEstacao } from "./GraficoAmplitudeEstacao";
 
 export function AnaliseAmplitude() {
   return (
@@ -7,25 +8,19 @@ export function AnaliseAmplitude() {
       <CardHeader>
         <CardTitle>Análise de Amplitude Térmica Diária</CardTitle>
         <CardDescription>
-          Impacto do efeito tampão da maritimidade na oscilação da temperatura.
+          Média mensal da oscilação térmica diária evidenciando a inércia térmica regional.
         </CardDescription>
       </CardHeader>
       <CardContent>
         <AbasEstacoesClimaticas
           conteudoBertioga={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Gráfico de Amplitude de Bertioga
-            </div>
+            <GraficoAmplitudeEstacao arquivoCsv="bertioga-a765.csv" corBarra="#2563eb" />
           }
           conteudoTaubate={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Gráfico de Amplitude de Taubaté
-            </div>
+            <GraficoAmplitudeEstacao arquivoCsv="taubate-a728.csv" corBarra="#16a34a" />
           }
           conteudoCamposJordao={
-            <div className="p-4 border rounded-xl bg-white h-[300px] flex items-center justify-center text-muted-foreground">
-              Gráfico de Amplitude de Campos do Jordão
-            </div>
+            <GraficoAmplitudeEstacao arquivoCsv="campos-jordao-a706.csv" corBarra="#ea580c" />
           }
         />
       </CardContent>
