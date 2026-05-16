@@ -13,7 +13,7 @@ export function AbasEstacoesClimaticas({
   conteudoCamposJordao,
 }: AbasEstacoesClimaticasProps) {
   return (
-    <Tabs defaultValue="campos" className="w-full">
+    <Tabs defaultValue="bertioga" className="w-full">
       <TabsList className="grid w-full grid-cols-3 max-w-2xl mb-6">
         <TabsTrigger value="bertioga" className="text-xs sm:text-sm px-2">
           Bertioga (0m)
