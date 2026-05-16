@@ -14,10 +14,16 @@ export function AbasEstacoesClimaticas({
 }: AbasEstacoesClimaticasProps) {
   return (
     <Tabs defaultValue="campos" className="w-full">
-      <TabsList className="grid w-full grid-cols-3 max-w-[450px] mb-6">
-        <TabsTrigger value="bertioga">Bertioga (0m)</TabsTrigger>
-        <TabsTrigger value="taubate">Taubaté (580m)</TabsTrigger>
-        <TabsTrigger value="campos">Campos do Jordão (1600m)</TabsTrigger>
+      <TabsList className="grid w-full grid-cols-3 max-w-2xl mb-6">
+        <TabsTrigger value="bertioga" className="text-xs sm:text-sm px-2">
+          Bertioga (0m)
+        </TabsTrigger>
+        <TabsTrigger value="taubate" className="text-xs sm:text-sm px-2">
+          Taubaté (580m)
+        </TabsTrigger>
+        <TabsTrigger value="campos" className="text-xs sm:text-sm px-2">
+          Campos do Jordão (1600m)
+        </TabsTrigger>
       </TabsList>
 
       <TabsContent value="bertioga">{conteudoBertioga}</TabsContent>
