@@ -1,5 +1,6 @@
 import { LineChart, Thermometer, BarChart3, Wind } from "lucide-react";
 import type { TipoAnaliseAtiva, ItemMenuNavegacao } from "@/types/analise";
+import { ThemeSelector } from "./ThemeSelector";
 import {
   Sidebar,
   SidebarContent,
@@ -9,6 +10,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarFooter,
 } from "@/components/ui/sidebar";
 
 interface MenuLateralProps {
@@ -48,6 +50,9 @@ export function MenuLateral({ analiseSelecionada, onAlterarAnalise }: MenuLatera
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter className="p-4 border-t border-sidebar-border">
+        <ThemeSelector />
+      </SidebarFooter>
     </Sidebar>
   );
 }
