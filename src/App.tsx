@@ -2,12 +2,13 @@ import { useState } from "react";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import type { TipoAnaliseAtiva } from "@/types/analise";
 import { MenuLateral } from "@/components/layout/MenuLateral";
+import { AnaliseComparativa } from "@/components/analises/AnaliseComparativa";
 import { AnaliseGradiente } from "@/components/analises/AnaliseGradiente";
 import { AnaliseAmplitude } from "@/components/analises/AnaliseAmplitude";
 import { AnaliseBrisas } from "@/components/analises/AnaliseBrisas";
 
 export default function App() {
-  const [analiseAtiva, setAnaliseAtiva] = useState<TipoAnaliseAtiva>("gradiente");
+  const [analiseAtiva, setAnaliseAtiva] = useState<TipoAnaliseAtiva>("comparativo");
 
   return (
     <SidebarProvider>
@@ -26,6 +27,7 @@ export default function App() {
             </h1>
           </div>
 
+          {analiseAtiva === "comparativo" && <AnaliseComparativa />}
           {analiseAtiva === "gradiente" && <AnaliseGradiente />}
           {analiseAtiva === "amplitude" && <AnaliseAmplitude />}
           {analiseAtiva === "brisas" && <AnaliseBrisas />}
