@@ -1,4 +1,4 @@
-import { LineChart, Thermometer, BarChart3, Wind } from "lucide-react";
+import { LineChart, Thermometer, BarChart3, Wind, Network } from "lucide-react";
 import type { TipoAnaliseAtiva, ItemMenuNavegacao } from "@/types/analise";
 import { ThemeSelector } from "./ThemeSelector";
 import {
@@ -20,6 +20,7 @@ interface MenuLateralProps {
 
 const listaItensMenu: ItemMenuNavegacao[] = [
   { id: "comparativo", titulo: "Comparativo Geral", icone: LineChart },
+  { id: "padroes", titulo: "Padrões Comportamentais", icone: Network },
   { id: "gradiente", titulo: "Gradiente Térmico", icone: Thermometer },
   { id: "amplitude", titulo: "Amplitude Térmica", icone: BarChart3 },
   { id: "brisas", titulo: "Dinâmica de Brisas", icone: Wind },

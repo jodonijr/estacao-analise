@@ -4,6 +4,7 @@ import type { TipoAnaliseAtiva } from "@/types/analise";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { MenuLateral } from "@/components/layout/MenuLateral";
 import { AnaliseComparativa } from "@/components/analises/AnaliseComparativa";
+import { AnalisePadroes } from "@/components/analises/AnalisePadroes";
 import { AnaliseGradiente } from "@/components/analises/AnaliseGradiente";
 import { AnaliseAmplitude } from "@/components/analises/AnaliseAmplitude";
 import { AnaliseBrisas } from "@/components/analises/AnaliseBrisas";
@@ -30,6 +31,7 @@ export default function App() {
             </div>
 
             {analiseAtiva === "comparativo" && <AnaliseComparativa />}
+            {analiseAtiva === "padroes" && <AnalisePadroes />}
             {analiseAtiva === "gradiente" && <AnaliseGradiente />}
             {analiseAtiva === "amplitude" && <AnaliseAmplitude />}
             {analiseAtiva === "brisas" && <AnaliseBrisas />}

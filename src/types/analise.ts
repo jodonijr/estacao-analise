@@ -1,4 +1,4 @@
-export type TipoAnaliseAtiva = "comparativo" | "gradiente" | "amplitude" | "brisas";
+export type TipoAnaliseAtiva = "comparativo" | "gradiente" | "amplitude" | "brisas" | "padroes";
 
 export interface ItemMenuNavegacao {
   id: TipoAnaliseAtiva;
