@@ -10,7 +10,7 @@ interface GraficoBrisasEstacaoProps {
 
 const configuracaoGrafico = {
   velocidadeMedia: {
-    label: "Velocidade Média",
+    label: "Velocidade Média (km/h)",
     color: "var(--area-vento)",
   },
 } satisfies ChartConfig;
@@ -37,10 +37,12 @@ export function GraficoBrisasEstacao({ arquivoCsv, corArea }: GraficoBrisasEstac
   const dadosAgregadosCicloDiurno = Object.entries(velocidadesPorHora)
     .map(([hora, velocidades]) => {
       const somaVelocidades = velocidades.reduce((acumulador, valor) => acumulador + valor, 0);
-      const mediaVelocidade = somaVelocidades / velocidades.length;
+      const mediaVelocidadeMs = somaVelocidades / velocidades.length;
+      const mediaVelocidadeKmh = mediaVelocidadeMs * 3.6;
+
       return {
         hora,
-        velocidadeMedia: parseFloat(mediaVelocidade.toFixed(2)),
+        velocidadeMedia: parseFloat(mediaVelocidadeKmh.toFixed(1)),
       };
     })
     .sort((primeiroItem, segundoItem) => primeiroItem.hora.localeCompare(segundoItem.hora));
@@ -51,7 +53,7 @@ export function GraficoBrisasEstacao({ arquivoCsv, corArea }: GraficoBrisasEstac
         <AreaChart data={dadosAgregadosCicloDiurno} margin={{ top: 20, left: 12, right: 12 }}>
           <CartesianGrid vertical={false} strokeDasharray="3 3" />
           <XAxis dataKey="hora" tickLine={false} axisLine={false} tickMargin={8} />
-          <YAxis tickLine={false} axisLine={false} unit=" m/s" domain={[0, "auto"]} />
+          <YAxis tickLine={false} axisLine={false} unit=" km/h" domain={[0, "auto"]} />
           <ChartTooltip content={<ChartTooltipContent />} />
           <defs>
             <linearGradient id="gradienteVento" x1="0" y1="0" x2="0" y2="1">
