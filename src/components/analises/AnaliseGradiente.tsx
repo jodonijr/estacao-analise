@@ -13,15 +13,9 @@ export function AnaliseGradiente() {
       </CardHeader>
       <CardContent>
         <AbasEstacoesClimaticas
-          conteudoBertioga={
-            <GraficoTemperaturaEstacao arquivoCsv="bertioga-a765.csv" corLinha="#2563eb" />
-          }
-          conteudoTaubate={
-            <GraficoTemperaturaEstacao arquivoCsv="taubate-a728.csv" corLinha="#16a34a" />
-          }
-          conteudoCamposJordao={
-            <GraficoTemperaturaEstacao arquivoCsv="campos-jordao-a706.csv" corLinha="#ea580c" />
-          }
+          conteudoBertioga={<GraficoTemperaturaEstacao arquivoCsv="bertioga-a765.csv" corLinha="#ef4444" />}
+          conteudoTaubate={<GraficoTemperaturaEstacao arquivoCsv="taubate-a728.csv" corLinha="#eab308" />}
+          conteudoCamposJordao={<GraficoTemperaturaEstacao arquivoCsv="campos-jordao-a706.csv" corLinha="#3b82f6" />}
         />
       </CardContent>
     </Card>

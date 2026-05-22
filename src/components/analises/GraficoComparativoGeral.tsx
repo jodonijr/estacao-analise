@@ -6,15 +6,15 @@ import type { ChartConfig } from "@/components/ui/chart";
 const configuracaoGrafico = {
   bertioga: {
     label: "Bertioga (0m)",
-    color: "#2563eb",
+    color: "#ef4444",
   },
   taubate: {
     label: "Taubaté (580m)",
-    color: "#16a34a",
+    color: "#eab308",
   },
   camposJordao: {
     label: "Campos do Jordão (1600m)",
-    color: "#ea580c",
+    color: "#3b82f6",
   },
 } satisfies ChartConfig;
 

@@ -13,15 +13,9 @@ export function AnaliseAmplitude() {
       </CardHeader>
       <CardContent>
         <AbasEstacoesClimaticas
-          conteudoBertioga={
-            <GraficoAmplitudeEstacao arquivoCsv="bertioga-a765.csv" corBarra="#2563eb" />
-          }
-          conteudoTaubate={
-            <GraficoAmplitudeEstacao arquivoCsv="taubate-a728.csv" corBarra="#16a34a" />
-          }
-          conteudoCamposJordao={
-            <GraficoAmplitudeEstacao arquivoCsv="campos-jordao-a706.csv" corBarra="#ea580c" />
-          }
+          conteudoBertioga={<GraficoAmplitudeEstacao arquivoCsv="bertioga-a765.csv" corBarra="#ef4444" />}
+          conteudoTaubate={<GraficoAmplitudeEstacao arquivoCsv="taubate-a728.csv" corBarra="#eab308" />}
+          conteudoCamposJordao={<GraficoAmplitudeEstacao arquivoCsv="campos-jordao-a706.csv" corBarra="#3b82f6" />}
         />
       </CardContent>
     </Card>

@@ -13,15 +13,9 @@ export function AnaliseBrisas() {
       </CardHeader>
       <CardContent>
         <AbasEstacoesClimaticas
-          conteudoBertioga={
-            <GraficoBrisasEstacao arquivoCsv="bertioga-a765.csv" corArea="#2563eb" />
-          }
-          conteudoTaubate={
-            <GraficoBrisasEstacao arquivoCsv="taubate-a728.csv" corArea="#16a34a" />
-          }
-          conteudoCamposJordao={
-            <GraficoBrisasEstacao arquivoCsv="campos-jordao-a706.csv" corArea="#ea580c" />
-          }
+          conteudoBertioga={<GraficoBrisasEstacao arquivoCsv="bertioga-a765.csv" corArea="#ef4444" />}
+          conteudoTaubate={<GraficoBrisasEstacao arquivoCsv="taubate-a728.csv" corArea="#eab308" />}
+          conteudoCamposJordao={<GraficoBrisasEstacao arquivoCsv="campos-jordao-a706.csv" corArea="#3b82f6" />}
         />
       </CardContent>
     </Card>
